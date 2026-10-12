@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#1a1a2e">
+<title>حفل تخرج م. نهال</title>
+<meta name="description" content="دعوة لحضور حفل تخرج المهندسة نهال - كلية تقنية الحاسوب">
+<meta property="og:title" content="حفل تخرج م. نهال 🎓">
+<meta property="og:description" content="يسعدنا دعوتكم لحضور حفل التخرج - الاثنين 19 أكتوبر 2026">
+<meta property="og:image" content="photo.jpg">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎓</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --bg:#faf7f2;
+  --card:#fff;
+  --gold:#c9a84c;
+  --gold-light:#e8d5a0;
+  --gold-dark:#8b6914;
+  --green:#4a6741;
+  --green-light:#7a9970;
+  --text:#2c2c2c;
+  --text-soft:#6b6b6b;
+  --rose:#e8c4c4;
+  --rose-deep:#c4918f;
+  --cream:#fdf8f0;
+  --serif:'Playfair Display','Amiri',serif;
+  --arabic:'Amiri','Traditional Arabic',serif;
+  --sans:'Tajawal','Segoe UI',sans-serif;
+}
+html{scroll-behavior:smooth;overflow-x:hidden}
+body{font-family:var(--sans);background:var(--bg);color:var(--text);overflow-x:hidden;-webkit-font-smoothing:antialiased}
+
+/* ===== SPLASH SCREEN ===== */
+.splash{position:fixed;inset:0;z-index:100;background:linear-gradient(135deg,#1a1a2e 0%,#16213e 50%,#0f3460 100%);display:flex;flex-direction:column;align-items:center;justify-content:center;cursor:pointer;transition:opacity .8s ease,visibility .8s}
+.splash.gone{opacity:0;visibility:hidden;pointer-events:none}
+.splash-content{text-align:center;color:#fff;animation:fadeUp 1.2s ease both}
+.splash .cap-icon{font-size:clamp(60px,15vw,100px);display:block;margin-bottom:20px;animation:float 3s ease-in-out infinite}
+.splash h2{font:400 clamp(14px,3.5vw,20px)/1.6 var(--sans);letter-spacing:.15em;color:rgba(255,255,255,.6);margin-bottom:12px}
+.splash h1{font:700 clamp(28px,7vw,48px)/1.2 var(--arabic);color:var(--gold-light);margin-bottom:8px}
+.splash .eng-name{font:italic 400 clamp(18px,4.5vw,30px)/1.3 var(--serif);color:rgba(255,255,255,.85);margin-bottom:30px}
+.splash .tap{font:300 clamp(12px,3vw,16px)/1 var(--sans);letter-spacing:.3em;color:rgba(255,255,255,.5);animation:pulse 2s ease-in-out infinite}
+.splash .line{width:1px;height:40px;background:linear-gradient(transparent,var(--gold-light));margin:16px auto 0;animation:drip 2s ease-in-out infinite}
+
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
+@keyframes pulse{0%,100%{opacity:.5}50%{opacity:1}}
+@keyframes drip{0%{transform:scaleY(0);opacity:0}50%{transform:scaleY(1);opacity:1}100%{transform:scaleY(1);opacity:0}}
+@keyframes fadeUp{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:none}}
+
+/* ===== PARTICLES ===== */
+.particles{position:fixed;inset:0;pointer-events:none;z-index:0;overflow:hidden}
+.particle{position:absolute;border-radius:50%;opacity:0;animation:sparkle linear infinite}
+@keyframes sparkle{
+  0%{opacity:0;transform:translateY(100vh) scale(0)}
+  10%{opacity:1}
+  90%{opacity:1}
+  100%{opacity:0;transform:translateY(-10vh) scale(1)}
+}
+
+/* ===== MAIN WRAPPER ===== */
+.invitation{max-width:600px;margin:0 auto;padding:0 16px;position:relative;z-index:1}
+
+/* ===== FLOWER CORNERS (CSS) ===== */
+.corner-decor{position:fixed;width:clamp(80px,20vw,160px);height:clamp(80px,20vw,160px);z-index:2;pointer-events:none;opacity:.5}
+.corner-decor svg{width:100%;height:100%}
+.corner-tl{top:0;left:0}
+.corner-tr{top:0;right:0;transform:scaleX(-1)}
+.corner-bl{bottom:0;left:0;transform:scaleY(-1)}
+.corner-br{bottom:0;right:0;transform:scale(-1)}
+
+/* ===== HEADER SECTION ===== */
+.header{padding:clamp(40px,10vw,80px) 0 30px;text-align:center}
+.header .bismillah{font:400 clamp(18px,5vw,28px)/1.6 var(--arabic);color:var(--gold);margin-bottom:20px;opacity:0;animation:revealText 1s ease .3s both}
+.header .ornament{display:flex;align-items:center;justify-content:center;gap:12px;margin:20px 0;opacity:0;animation:revealText 1s ease .5s both}
+.header .ornament .line{flex:0 0 clamp(30px,10vw,80px);height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent)}
+.header .ornament .diamond{width:8px;height:8px;background:var(--gold);transform:rotate(45deg);flex-shrink:0}
+
+/* ===== PHOTO SECTION ===== */
+.photo-section{margin:30px auto;text-align:center;opacity:0;animation:revealText 1.2s ease .7s both}
+.photo-frame{position:relative;display:inline-block;max-width:min(85vw,380px);border-radius:20px;overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,.12),0 4px 20px rgba(201,168,76,.15)}
+.photo-frame img{width:100%;display:block;border-radius:20px}
+.photo-frame::before{content:'';position:absolute;inset:0;border:3px solid var(--gold-light);border-radius:20px;z-index:1;pointer-events:none}
+.photo-frame::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,transparent 60%,rgba(26,26,46,.3));border-radius:20px;z-index:1;pointer-events:none}
+
+/* ===== NAME SECTION ===== */
+.name-section{text-align:center;padding:30px 0;opacity:0;animation:revealText 1s ease 1s both}
+.name-section .congrats{font:300 clamp(14px,3.5vw,18px)/1.6 var(--sans);color:var(--text-soft);letter-spacing:.1em;margin-bottom:8px}
+.name-section .ar-name{font:700 clamp(32px,9vw,56px)/1.2 var(--arabic);color:var(--gold-dark);margin-bottom:4px}
+.name-section .en-name{font:italic 600 clamp(20px,5vw,32px)/1.3 var(--serif);color:var(--text);margin-bottom:16px}
+.name-section .degree{display:inline-block;font:500 clamp(13px,3.2vw,16px)/1 var(--sans);color:var(--green);background:rgba(74,103,65,.08);padding:8px 24px;border-radius:30px;border:1px solid rgba(74,103,65,.15);letter-spacing:.08em}
+
+/* ===== DIVIDER ===== */
+.divider{display:flex;align-items:center;justify-content:center;gap:16px;padding:20px 0;opacity:0;animation:revealText .8s ease 1.2s both}
+.divider .side-line{flex:0 0 clamp(20px,8vw,60px);height:1px;background:var(--gold-light)}
+.divider svg{width:24px;height:24px;fill:var(--gold);flex-shrink:0}
+
+/* ===== CARD ===== */
+.card{background:var(--card);border-radius:24px;padding:clamp(28px,7vw,48px);margin:20px 0;box-shadow:0 8px 40px rgba(0,0,0,.06),0 1px 3px rgba(0,0,0,.04);position:relative;overflow:hidden;opacity:0;animation:slideUp 1s ease 1.4s both}
+.card::before{content:'';position:absolute;top:0;right:0;left:0;height:4px;background:linear-gradient(90deg,var(--gold-light),var(--gold),var(--gold-light))}
+
+.card .section-title{font:700 clamp(16px,4vw,22px)/1.4 var(--arabic);color:var(--gold-dark);margin-bottom:20px;display:flex;align-items:center;gap:10px}
+.card .section-title .icon{font-size:1.3em}
+
+@keyframes slideUp{from{opacity:0;transform:translateY(40px)}to{opacity:1;transform:none}}
+@keyframes revealText{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:none}}
+
+/* ===== EVENT DETAILS ===== */
+.detail-grid{display:grid;gap:20px}
+.detail-item{display:flex;align-items:flex-start;gap:14px;padding:16px;background:var(--cream);border-radius:16px;border-right:3px solid var(--gold-light)}
+.detail-item .d-icon{font-size:clamp(24px,6vw,32px);flex-shrink:0;line-height:1;margin-top:2px}
+.detail-item .d-content{min-width:0}
+.detail-item .d-label{font:500 clamp(11px,2.8vw,13px)/1 var(--sans);color:var(--text-soft);letter-spacing:.08em;margin-bottom:6px}
+.detail-item .d-value{font:700 clamp(16px,4vw,20px)/1.4 var(--arabic);color:var(--text)}
+.detail-item .d-sub{font:400 clamp(13px,3.2vw,15px)/1.4 var(--sans);color:var(--text-soft);margin-top:4px}
+
+/* ===== COUNTDOWN ===== */
+.countdown-section{margin:24px 0;opacity:0;animation:slideUp 1s ease 1.8s both}
+.countdown-section .cd-title{text-align:center;font:700 clamp(15px,3.8vw,20px)/1.4 var(--arabic);color:var(--gold-dark);margin-bottom:16px}
+.countdown{display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(8px,2vw,16px);text-align:center}
+.cd-box{background:linear-gradient(135deg,#1a1a2e,#16213e);border-radius:16px;padding:clamp(12px,3vw,20px) 8px;color:#fff;box-shadow:0 4px 15px rgba(26,26,46,.2)}
+.cd-num{font:700 clamp(24px,7vw,42px)/1 var(--serif);color:var(--gold-light);display:block}
+.cd-label{font:400 clamp(10px,2.5vw,13px)/1 var(--sans);color:rgba(255,255,255,.6);margin-top:6px;display:block}
+
+/* ===== VERSE ===== */
+.verse-card{background:linear-gradient(135deg,rgba(74,103,65,.04),rgba(201,168,76,.06));border:1px solid rgba(201,168,76,.15);border-radius:20px;padding:clamp(24px,6vw,40px);margin:24px 0;text-align:center;opacity:0;animation:slideUp 1s ease 2s both}
+.verse-card .ayah{font:400 clamp(18px,5vw,26px)/1.8 var(--arabic);color:var(--text);margin-bottom:12px}
+.verse-card .surah{font:400 clamp(12px,3vw,14px)/1 var(--sans);color:var(--text-soft)}
+
+/* ===== MESSAGE ===== */
+.message{text-align:center;padding:30px 0;font:400 clamp(15px,3.8vw,18px)/1.8 var(--arabic);color:var(--text-soft);opacity:0;animation:slideUp 1s ease 2.2s both}
+.message .heart{color:var(--rose-deep);font-size:1.2em}
+
+/* ===== FOOTER ===== */
+.footer{text-align:center;padding:30px 0 50px;opacity:0;animation:revealText 1s ease 2.4s both}
+.footer .sig{font:400 clamp(28px,8vw,44px)/1 var(--serif);color:var(--gold);font-style:italic}
+.footer .year{font:500 clamp(12px,3vw,14px)/1 var(--sans);color:var(--text-soft);letter-spacing:.3em;margin-top:10px}
+.footer .flowers{font-size:clamp(20px,5vw,30px);margin-top:16px;display:block}
+
+/* ===== BUTTERFLIES ===== */
+.butterfly{position:fixed;font-size:clamp(16px,4vw,24px);z-index:3;pointer-events:none;opacity:.5;animation:fly linear infinite}
+@keyframes fly{
+  0%{transform:translate(0,0) rotate(0deg)}
+  25%{transform:translate(30px,-40px) rotate(10deg)}
+  50%{transform:translate(-20px,-80px) rotate(-5deg)}
+  75%{transform:translate(40px,-120px) rotate(15deg)}
+  100%{transform:translate(0,-160px) rotate(0deg)}
+}
+
+/* ===== RESPONSIVE ===== */
+@media(min-width:768px){
+  .invitation{padding:0 24px}
+  .detail-grid{grid-template-columns:1fr 1fr;gap:16px}
+  .detail-grid .detail-item:last-child{grid-column:1/-1}
+}
+</style>
+</head>
+<body>
+
+<!-- SPLASH SCREEN -->
+<div class="splash" id="splash" onclick="enterInvitation()">
+  <div class="splash-content">
+    <span class="cap-icon">🎓</span>
+    <h2>دعـــوة حفــل تخـــرج</h2>
+    <h1>م. نهـــال</h1>
+    <p class="eng-name">Eng. Nehal</p>
+    <span class="tap">اضغط للدخول</span>
+    <div class="line"></div>
+  </div>
+</div>
+
+<!-- PARTICLES -->
+<div class="particles" id="particles"></div>
+
+<!-- CORNER DECORATIONS -->
+<div class="corner-decor corner-tl"><svg viewBox="0 0 200 200"><g opacity=".6"><circle cx="30" cy="30" r="18" fill="none" stroke="#c9a84c" stroke-width=".5"/><circle cx="60" cy="20" r="8" fill="none" stroke="#e8c4c4" stroke-width=".5"/><circle cx="20" cy="55" r="6" fill="none" stroke="#7a9970" stroke-width=".5"/><path d="M10 80q20-30 50-20q-30-10-30-40" fill="none" stroke="#7a9970" stroke-width=".8" opacity=".4"/><path d="M70 10q-20 30-50 25q30 5 35 35" fill="none" stroke="#c9a84c" stroke-width=".6" opacity=".3"/><circle cx="45" cy="45" r="3" fill="#e8c4c4" opacity=".4"/><circle cx="15" cy="40" r="2" fill="#c9a84c" opacity=".3"/></g></svg></div>
+<div class="corner-decor corner-tr"><svg viewBox="0 0 200 200"><g opacity=".6"><circle cx="30" cy="30" r="18" fill="none" stroke="#c9a84c" stroke-width=".5"/><circle cx="60" cy="20" r="8" fill="none" stroke="#e8c4c4" stroke-width=".5"/><circle cx="20" cy="55" r="6" fill="none" stroke="#7a9970" stroke-width=".5"/><path d="M10 80q20-30 50-20q-30-10-30-40" fill="none" stroke="#7a9970" stroke-width=".8" opacity=".4"/><path d="M70 10q-20 30-50 25q30 5 35 35" fill="none" stroke="#c9a84c" stroke-width=".6" opacity=".3"/><circle cx="45" cy="45" r="3" fill="#e8c4c4" opacity=".4"/><circle cx="15" cy="40" r="2" fill="#c9a84c" opacity=".3"/></g></svg></div>
+<div class="corner-decor corner-bl"><svg viewBox="0 0 200 200"><g opacity=".6"><circle cx="30" cy="30" r="18" fill="none" stroke="#c9a84c" stroke-width=".5"/><circle cx="60" cy="20" r="8" fill="none" stroke="#e8c4c4" stroke-width=".5"/><circle cx="20" cy="55" r="6" fill="none" stroke="#7a9970" stroke-width=".5"/><path d="M10 80q20-30 50-20q-30-10-30-40" fill="none" stroke="#7a9970" stroke-width=".8" opacity=".4"/></g></svg></div>
+<div class="corner-decor corner-br"><svg viewBox="0 0 200 200"><g opacity=".6"><circle cx="30" cy="30" r="18" fill="none" stroke="#c9a84c" stroke-width=".5"/><circle cx="60" cy="20" r="8" fill="none" stroke="#e8c4c4" stroke-width=".5"/><circle cx="20" cy="55" r="6" fill="none" stroke="#7a9970" stroke-width=".5"/><path d="M10 80q20-30 50-20q-30-10-30-40" fill="none" stroke="#7a9970" stroke-width=".8" opacity=".4"/></g></svg></div>
+
+<!-- BUTTERFLIES -->
+<div class="butterfly" style="top:20%;left:8%;animation-duration:8s;animation-delay:0s;opacity:.35">🦋</div>
+<div class="butterfly" style="top:45%;right:5%;animation-duration:10s;animation-delay:2s;opacity:.25;font-size:18px">🦋</div>
+<div class="butterfly" style="top:70%;left:12%;animation-duration:12s;animation-delay:4s;opacity:.3;font-size:14px">🦋</div>
+<div class="butterfly" style="top:60%;right:10%;animation-duration:9s;animation-delay:6s;opacity:.2">🦋</div>
+
+<div class="invitation" id="invitation">
+
+  <!-- HEADER -->
+  <header class="header">
+    <p class="bismillah">بسم الله الرحمن الرحيم</p>
+    <div class="ornament">
+      <span class="line"></span>
+      <span class="diamond"></span>
+      <span class="line"></span>
+    </div>
+  </header>
+
+  <!-- PHOTO -->
+  <section class="photo-section">
+    <div class="photo-frame">
+      <img src="photo.jpg" alt="صورة التخرج - م. نهال" loading="eager">
+    </div>
+  </section>
+
+  <!-- NAME -->
+  <section class="name-section">
+    <p class="congrats">يسرنا ويسعدنا دعوتكم لحضور</p>
+    <h1 class="ar-name">حفل تخرج</h1>
+    <h2 class="en-name">Eng. Nehal</h2>
+    <span class="degree">🎓 كلية تقنية الحاسوب</span>
+  </section>
+
+  <div class="divider">
+    <span class="side-line"></span>
+    <svg viewBox="0 0 24 24"><path d="M12 2L9.19 8.63 2 9.24l5.46 4.73L5.82 21 12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61z"/></svg>
+    <span class="side-line"></span>
+  </div>
+
+  <!-- EVENT DETAILS CARD -->
+  <div class="card">
+    <h3 class="section-title"><span class="icon">📋</span> تفاصيل الحفل</h3>
+    <div class="detail-grid">
+      <div class="detail-item">
+        <span class="d-icon">📅</span>
+        <div class="d-content">
+          <span class="d-label">التاريخ</span>
+          <span class="d-value">الاثنين 19 أكتوبر 2026</span>
+          <span class="d-sub">19 / 10 / 2026</span>
+        </div>
+      </div>
+      <div class="detail-item">
+        <span class="d-icon">🕘</span>
+        <div class="d-content">
+          <span class="d-label">الساعة</span>
+          <span class="d-value">التاسعة صباحاً</span>
+          <span class="d-sub">9:00 AM</span>
+        </div>
+      </div>
+      <div class="detail-item">
+        <span class="d-icon">📍</span>
+        <div class="d-content">
+          <span class="d-label">المكان</span>
+          <span class="d-value">كلية تقنية الحاسوب</span>
+          <span class="d-sub">طرابلس، ليبيا</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- COUNTDOWN -->
+  <div class="countdown-section">
+    <h3 class="cd-title">⏳ العد التنازلي للحفل</h3>
+    <div class="countdown" id="countdown">
+      <div class="cd-box"><span class="cd-num" id="cd-days">--</span><span class="cd-label">يوم</span></div>
+      <div class="cd-box"><span class="cd-num" id="cd-hours">--</span><span class="cd-label">ساعة</span></div>
+      <div class="cd-box"><span class="cd-num" id="cd-mins">--</span><span class="cd-label">دقيقة</span></div>
+      <div class="cd-box"><span class="cd-num" id="cd-secs">--</span><span class="cd-label">ثانية</span></div>
+    </div>
+  </div>
+
+  <!-- QURAN VERSE -->
+  <div class="verse-card">
+    <p class="ayah">﴿ رَبِّ أَوْزِعْنِي أَنْ أَشْكُرَ نِعْمَتَكَ الَّتِي أَنْعَمْتَ عَلَيَّ ﴾</p>
+    <span class="surah">— سورة النمل، آية 19</span>
+  </div>
+
+  <!-- MESSAGE -->
+  <div class="message">
+    <p>حضوركم يسعدنا ويزيد فرحتنا <span class="heart">♥</span></p>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p class="sig">Nehal</p>
+    <p class="year">— C L A S S &nbsp; O F &nbsp; 2 0 2 6 —</p>
+    <span class="flowers">🌸 🦋 🌸</span>
+  </footer>
+</div>
+
+<script>
+// Splash screen
+function enterInvitation(){
+  document.getElementById('splash').classList.add('gone');
+  document.body.style.overflow='auto';
+  startCountdown();
+}
+document.body.style.overflow='hidden';
+
+// Countdown to Oct 19, 2026 9:00 AM (Libya time, UTC+2)
+function startCountdown(){
+  const target=new Date('2026-10-19T09:00:00+02:00').getTime();
+  function update(){
+    const now=Date.now(),diff=target-now;
+    if(diff<=0){
+      document.getElementById('cd-days').textContent='0';
+      document.getElementById('cd-hours').textContent='0';
+      document.getElementById('cd-mins').textContent='0';
+      document.getElementById('cd-secs').textContent='0';
+      return;
+    }
+    const d=Math.floor(diff/864e5),h=Math.floor(diff%864e5/36e5),m=Math.floor(diff%36e5/6e4),s=Math.floor(diff%6e4/1e3);
+    document.getElementById('cd-days').textContent=d;
+    document.getElementById('cd-hours').textContent=h;
+    document.getElementById('cd-mins').textContent=m;
+    document.getElementById('cd-secs').textContent=s;
+    requestAnimationFrame(()=>setTimeout(update,1000));
+  }
+  update();
+}
+
+// Particles
+(function(){
+  const c=document.getElementById('particles');
+  const colors=['#c9a84c','#e8c4c4','#7a9970','#e8d5a0','#fff'];
+  for(let i=0;i<25;i++){
+    const p=document.createElement('div');
+    p.className='particle';
+    const size=Math.random()*4+2;
+    p.style.cssText=`width:${size}px;height:${size}px;left:${Math.random()*100}%;background:${colors[i%5]};animation-duration:${Math.random()*8+6}s;animation-delay:${Math.random()*8}s`;
+    c.appendChild(p);
+  }
+})();
+</script>
+</body>
+</html>
