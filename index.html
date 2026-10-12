@@ -4,10 +4,10 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="theme-color" content="#1a1a2e">
-<title>حفل تخرج م. نهال</title>
-<meta name="description" content="دعوة لحضور حفل تخرج المهندسة نهال - كلية تقنية الحاسوب">
-<meta property="og:title" content="حفل تخرج م. نهال 🎓">
-<meta property="og:description" content="يسعدنا دعوتكم لحضور حفل التخرج - الاثنين 19 أكتوبر 2026">
+<title>مناقشة مشروع تخرج م. نهال جمال لحيو</title>
+<meta name="description" content="دعوة لحضور مناقشة مشروع تخرج المهندسة نهال جمال لحيو - كلية تقنية الحاسوب">
+<meta property="og:title" content="مناقشة مشروع تخرج م. نهال جمال لحيو 🎓">
+<meta property="og:description" content="يسعدنا دعوتكم لحضور مناقشة مشروع التخرج - الاثنين 19 أكتوبر 2026">
 <meta property="og:image" content="photo.jpg">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎓</text></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -116,6 +116,8 @@ body{font-family:var(--sans);background:var(--bg);color:var(--text);overflow-x:h
 .detail-item .d-label{font:500 clamp(11px,2.8vw,13px)/1 var(--sans);color:var(--text-soft);letter-spacing:.08em;margin-bottom:6px}
 .detail-item .d-value{font:700 clamp(16px,4vw,20px)/1.4 var(--arabic);color:var(--text)}
 .detail-item .d-sub{font:400 clamp(13px,3.2vw,15px)/1.4 var(--sans);color:var(--text-soft);margin-top:4px}
+.map-btn{display:inline-flex;align-items:center;gap:6px;margin-top:8px;padding:7px 14px;background:linear-gradient(135deg,var(--gold),var(--gold-dark));color:#fff;border-radius:20px;text-decoration:none;font:500 clamp(11px,2.8vw,13px)/1 var(--sans);box-shadow:0 2px 8px rgba(139,105,20,.2);transition:transform .2s,box-shadow .2s}
+.map-btn:hover{transform:translateY(-1px);box-shadow:0 4px 12px rgba(139,105,20,.3)}
 
 /* ===== COUNTDOWN ===== */
 .countdown-section{margin:24px 0;opacity:0;animation:slideUp 1s ease 1.8s both}
@@ -164,9 +166,9 @@ body{font-family:var(--sans);background:var(--bg);color:var(--text);overflow-x:h
 <div class="splash" id="splash" onclick="enterInvitation()">
   <div class="splash-content">
     <span class="cap-icon">🎓</span>
-    <h2>دعـــوة حفــل تخـــرج</h2>
-    <h1>م. نهـــال</h1>
-    <p class="eng-name">Eng. Nehal</p>
+    <h2>دعـــوة مناقشة مشروع تخـــرج</h2>
+    <h1>م. نهال جمال لحيو</h1>
+    <p class="eng-name">Eng. Nehal Jamal Lahew</p>
     <span class="tap">اضغط للدخول</span>
     <div class="line"></div>
   </div>
@@ -209,9 +211,10 @@ body{font-family:var(--sans);background:var(--bg);color:var(--text);overflow-x:h
   <!-- NAME -->
   <section class="name-section">
     <p class="congrats">يسرنا ويسعدنا دعوتكم لحضور</p>
-    <h1 class="ar-name">حفل تخرج</h1>
-    <h2 class="en-name">Eng. Nehal</h2>
-    <span class="degree">🎓 كلية تقنية الحاسوب</span>
+    <h1 class="ar-name">مناقشة مشروع تخرج</h1>
+    <h2 class="en-name">م. نهال جمال لحيو</h2>
+    <p style="font:italic 500 clamp(16px,4vw,22px)/1.4 var(--serif);color:var(--text-soft);margin-bottom:12px">Eng. Nehal Jamal Lahew</p>
+    <span class="degree">💻 تخصص هندسة البرمجيات • كلية تقنية الحاسوب</span>
   </section>
 
   <div class="divider">
@@ -222,7 +225,7 @@ body{font-family:var(--sans);background:var(--bg);color:var(--text);overflow-x:h
 
   <!-- EVENT DETAILS CARD -->
   <div class="card">
-    <h3 class="section-title"><span class="icon">📋</span> تفاصيل الحفل</h3>
+    <h3 class="section-title"><span class="icon">📋</span> تفاصيل المناقشة</h3>
     <div class="detail-grid">
       <div class="detail-item">
         <span class="d-icon">📅</span>
@@ -246,6 +249,9 @@ body{font-family:var(--sans);background:var(--bg);color:var(--text);overflow-x:h
           <span class="d-label">المكان</span>
           <span class="d-value">كلية تقنية الحاسوب</span>
           <span class="d-sub">طرابلس، ليبيا</span>
+          <a href="https://maps.google.com/?q=كلية+تقنية+الحاسوب+طرابلس" target="_blank" rel="noopener noreferrer" class="map-btn">
+            <span>📍 موقع الكلية على خرائط Google</span>
+          </a>
         </div>
       </div>
     </div>
@@ -253,7 +259,7 @@ body{font-family:var(--sans);background:var(--bg);color:var(--text);overflow-x:h
 
   <!-- COUNTDOWN -->
   <div class="countdown-section">
-    <h3 class="cd-title">⏳ العد التنازلي للحفل</h3>
+    <h3 class="cd-title">⏳ العد التنازلي لموعد المناقشة</h3>
     <div class="countdown" id="countdown">
       <div class="cd-box"><span class="cd-num" id="cd-days">--</span><span class="cd-label">يوم</span></div>
       <div class="cd-box"><span class="cd-num" id="cd-hours">--</span><span class="cd-label">ساعة</span></div>
@@ -275,7 +281,7 @@ body{font-family:var(--sans);background:var(--bg);color:var(--text);overflow-x:h
 
   <!-- FOOTER -->
   <footer class="footer">
-    <p class="sig">Nehal</p>
+    <p class="sig">Nehal Jamal Lahew</p>
     <p class="year">— C L A S S &nbsp; O F &nbsp; 2 0 2 6 —</p>
     <span class="flowers">🌸 🦋 🌸</span>
   </footer>
